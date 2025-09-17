@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 1</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar subheader"
+        "sidebar content"
+        "sidebar footer";
+      grid-template-columns: 220px 1fr;
+      grid-template-rows: 70px 60px 1fr 60px;
+      background: #fff;
+      width: 920px;
+      min-height: 600px;
+      gap: 12px;
+      padding: 14px;
+      border-radius: 16px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    }
+
+    .header {
+      grid-area: header;
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 18px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background: #e9ecef;
+      padding: 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .sub-header {
+      grid-area: subheader;
+      background: #3498db;
+      color: #fff;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-weight: 600;
+    }
+
+    .content {
+      grid-area: content;
+      background: #9b59b6;
+      color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.06);
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      grid-area: footer;
+      background: #34495e;
+      color: #fff;
+      border-radius: 8px;
+      text-align: center;
+      padding: 14px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="header">Header</div>
+    <div class="sidebar">
+      <p>Sidebar </p>
+    </div>
+    <div class="sub-header">Sub-header</div>
+    <div class="content">
+      <p>Main content area</p>
+    </div>
+    <div class="footer">Footer</div>
+  </div>
+</body>
+</html>
